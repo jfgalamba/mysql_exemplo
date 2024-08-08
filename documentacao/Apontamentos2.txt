@@ -1,0 +1,30 @@
+SQL
+=====
+    Microsoft : SQL Server -> TransactSQL (TSQL)
+    Oracle    : Oracle     -> PL/SQL
+              : MySQL      -> MySQL SQL
+
+    SQLite    : SQLite    
+
+
+DDL: Data Definition Language
+     Comandos para criar o modelo de dados:
+        CREATE  -> cria um objecto no servidor de dados
+        DROP    -> remove um objecto do servidor de dados
+        ALTER   -> modifica um objecto no servidor de dados
+
+DML: Data Modification Language
+     Comandos para manipular dados nas tabelas
+        INSERT  -> Insere uma ou mais linhas numa tabela
+        DELETE  -> Remove linhas de uma tabela
+        UPDATE  -> Actualiza linhas de uma tabela
+
+DQL: Data Query Language
+     Comandos para pesquisar dados
+        SELECT  -> Selecciona uma ou mais linhas de uma ou mais tabelas
+        SHOW    -> Para listar objectos no servidor de dados
+
+     Para além de permitir fazer consultas, o SELECT tem mais utilidades:
+        . Obter resultados de expressões (uma espécie de calculadora)
+        . Obter informação do sistema (ex: versão do SQL, data/hora, 
+          o valor de variáveis de sistema, etc)

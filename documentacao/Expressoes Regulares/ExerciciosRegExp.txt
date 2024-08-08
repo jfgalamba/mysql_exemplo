@@ -1,0 +1,64 @@
+
+TPC 1:
+--------
+
+Escreva expressões regulares para identificar strings com as seguintes características:
+
+1. Iniciadas por uma vogal minúscula.
+
+2. Terminadas numa vogal maiúscula ou num dígito.
+
+3. Começadas por um dígito e terminadas numa vogal minúscula ou maiúscula.
+
+4. Começadas por 'a' e terminadas num dígito ou começadas por 'b' e 
+   terminadas num dos seguintes caracteres: '%', '&' , '='. 
+
+    Aceites: a___7, aXPTO6, b________%, b%$%$%%&=
+    Não aceites: a____, aaaaa, a  ### =, b______7, a  7 b_____=  
+
+5. Que contenham um dígito seguido de 2 a 5 ocorrências do '#'
+
+5.1 Que contenham um dígito seguido de 2 a 5 ocorrências do '#' (5 é o máximo).
+
+6. Que contenham o padrão duas letras (min. ou maius.) seguidas
+   de quatro dígitos.
+
+7. Que terminem no padrão em cima indicado
+
+8. Que contenham o padrão anterior mas não podem ter mais do que 
+   4 digitos.
+
+9. Strings com as palavras Linux ou UNIX. Depois repita o exercício mas agora 
+   pretende linhas com Linux e UNIX.
+
+10. Strings iniciadas por uma vogal minúsculas ou terminadas num dígito. 
+    Linhas que verifiquem ambos os critérios ou nenhum deles devem ser 
+    rejeitadas.
+
+11. Strings que contenham um não-espaçamento.
+
+12. Strings que comecem por um a seis '#', seguidos de pelo menos um 
+    espaçamento horizonal, devendo existir um caractere de não-espaçamento.
+    Alternativamente, as strings poderão não ter nenhum caractere após os 
+    '#'.
+
+    Nos exemplos em baixo o '.' denota um espaço
+
+    Aceites:  ###.bla,  #.....blu....., #
+    Não aceites: #., #####......, ####bla, #x...X...,
+
+13. Strings que contenham um conjunto de caracteres (pelo menos 2) entre '!' e '!'.
+
+14. Expressão regular para matrículas do género: 12-XY-13
+
+15. Validar com expressão regular número de 0 a 255.
+ 
+    Aceites: 0, 1, 23, 98, 179, 199, 200, 209, 229, 249, 255
+    Não-aceites: 00, 000, 01, 012, 259
+
+16. Expressão regular para validar um endereço IP.
+
+    
+
+    
+

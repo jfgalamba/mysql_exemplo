@@ -1,0 +1,6 @@
+1001;Arnaldo;Avelar;Av. António Ferreira;Amarante;3050;1999-05-05;2111
+1002;Bernardo;Bastinhas;Pr. Baptista Ferreira;Braga;3002;1998-02-25;2112
+1003;Carla;Conceição;Rua Carolina Ferreira;Covilhã;3051;2000-01-01;2113
+1004;Duarte;Domingos;Bairro David Ferreira;Darque;3052;1998-01-14;2114
+1005;Eugénia;Estrela;Travessa Euleutério Ferreira;Estremoz;3091;2002-11-17;2115
+1006;Fernanda;Fonseca;Urbanização Francisco Ferreira;Fátima;3092;2001-08-15;2116

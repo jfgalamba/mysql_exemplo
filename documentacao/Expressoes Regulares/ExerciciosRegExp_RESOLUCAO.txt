@@ -1,0 +1,58 @@
+
+TPC 1:
+--------
+
+1. R: ^[aeiou]   
+
+2. R: [AEIOU0-9]$
+       [AEIOU\d]$
+
+3. R: ^\d.*[aeiouAEIOU]$
+
+4. R: ^(a.*\d|b.*[%&=])$
+
+       ^a.*\d|b.*[%&=]$  --> errado 
+
+5. R: \d#{2,5}
+
+5.1 Que contenham um dígito seguido de 2 a 5 ocorrências do '#' (5 é o máximo).
+
+    R: \d#{2,5}([^#]|$)
+
+6. R: [a-zA-Z]{2}\d{4}
+
+7.  R: [a-zA-Z]{2}\d{4}$
+
+8. R: [a-zA-Z]{2}\d{4}([^\d]|$)
+
+9. R1: Linux|UNIX
+
+    R2: Linux.*UNIX|UNIX.*Linux
+
+10. R: ^[aeiou](.*[^\d])?$|^([^aeiou].*)?\d$
+
+
+11. R: \S
+
+12. R: ^#{1,6}(\s+\S)?
+
+13. R: !.{2,}!
+
+14. R: ^\d{2}-[A-Z]{2}-\d{2}$
+       
+    const cat1 = '\d{2}-[A-Z]{2}-\d{2}';
+    const cat2 = '\d{2}[A-Z]{2}\d{2}';
+    const cat3 = '\d{2}-[A-P]{2}\d{2}';
+    const matrRegex = new RegExp(`^${cat1}|${cat2}|${cat3}`);
+    matrRegex.test('19-AE-20')
+
+15. ^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$
+
+16. const parcelaIP = '([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])';
+    
+    const endIP = new RegExp(`(${parcelaIP}\.){3}${parecelaIP}`)
+
+    JS = `Bom dia ${2+3}` (template string)
+
+    Python = f'Bom dia {2+3}' (f-string)
+

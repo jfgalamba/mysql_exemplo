@@ -1,0 +1,75 @@
+CORRECÇÃO TPC 2:
+-----------------
+
+^[AEIOU]+$  --> 
+
+^([A-Z]{2,}\s+)+[A-Z]{2,}$  -->
+
+1. Traduzir para português as duas expressões regulares. Indicar o significado 
+   de todos os metacaracteres.
+
+    1a: String contendo apenas vogais maiúsculas. 
+
+    2a: String contendo "palavras" com 2 ou mais maiúsculas, sendo 
+        as palavras separadas por um ou mais caracteres de espaçamento (excepto
+        a mudança de linha). O número mínimo de palavras é 2.
+
+
+        ^ : Âncora início de string/linha
+
+        $ : Âncora fim de string/linha
+
+        + : Quantificador: UMA ou mais ocorrências da expressão anterior 
+            (ie, à esquerda do mais) <=> {1,} 
+
+        * : Quantificador: ZERO ou mais ocorrências da expressão anterior 
+            (ie, à esquerda do asterisco) <=> {0,}
+
+        {A,B} : Quantificador: número de ocorrências entre A e B
+                Exemplo:  'ab{3,7}'   => três a sete ocorrências de 'b'
+                Exemplo:  '(aa){3,7}' => três a sete ocorrências de 'aa'
+                Exemplo:  'z{3,}'     => pelo menos três ocorrências de 'z'
+                Exemplo:  'z{,7}'     => no máximo sete ocorrências de 'z'
+                Exemplo:  'z{7}'      => exactamente sete ocorrências de 'z'
+
+        [ ] :   Classe de caracteres
+                Exemplo: 'a[xy]b'     => aceita 'axb', 'ayb'
+                                      => não aceita 'ab', 'axyb', 'ayxb'
+                Exemplo: 'a[xy]{2}b'  => aceita 'axxb', 'axyb', 'ayyb', 'ayxb'
+                                      => não aceita 'ab', 'axb', 'ayb'
+                Exemplo: 'a[F-J]b'    => aceita 'aFb', 'aGb', 'aHb', etc.
+                Exemplo: 'a[F-J1-3]b' => aceita 'aFb', 'aGb', 'aHb', etc, 'a1b', 'a2b', ...
+
+        .  :    Um qualquer caractere
+
+        |  :    Ou
+
+2.
+    2.1 R:  JavaScript|C#
+
+    2.2 Aceitar strings que contenham "JavaScript" E "C#" (a posição é irrelevante)
+    
+    R1: JavaScript.*C#|C#.*JavaScript
+
+    R2: (?=.*JavaScript)(?=.*C#)
+
+
+    2.3 Aceitar strings que contenham as palavras "JavaScript" ou "C#", mas não
+    ambas (ou seja, "JavaScript" XOR "C#")
+
+        R1: ^(?!.*C#.*$).*JavaScript|^(?!.*JavaScript.*$).*C#
+        
+        R2: 
+
+        function testXOR(str, expr1, expr2) {
+            let res = (expr1.test(str) && !expr2.test(str)) 
+                   || (!expr1.test(str) && expr2.test(str));
+            return res;
+        }
+
+        function testXOR(str, expr1, expr2) {
+            let res = (str.match(expr1) && !str.match(expr2))
+                   || (str.match(expr2) && !str.match(expr1)); 
+            return !!res;
+        }
+

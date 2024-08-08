@@ -1,0 +1,43 @@
+
+1. Considere as seguintes expressões regulares:
+
+    ^[AEIOU]+$                   --> 
+
+    ^([A-Z]{2,}\s+)+[A-Z]{2,}$   -->
+
+    Traduzir para português estas expressões regulares. Indique o significado 
+    de todos os metacaracteres.
+
+2. Desenvolva expressões regulares 
+
+    2.1 Aceitar strings que contenham "JavaScript" OU "C#" (ou ambas)
+
+    2.2 Aceitar strings que contenham "JavaScript" E "C#" (a posição é irrelevante)
+    
+    2.3 Aceitar strings que contenham as palavras "JavaScript" ou "C#", mas não
+    ambas (ou seja, "JavaScript" XOR "C#")
+
+
+3. Considere endereços parecidos mas não iguais a endereços de email:
+
+    . dois ou mais caracteres de qualquer tipo, mas o primeiro tem que ser uma
+      letra
+
+    . uma arroba
+
+    . dois ou a cinco caracteres alfanuméricos, mas o primero tem que ser uma 
+      letra
+
+    . um ponto 
+
+    . dois ou três caracteres alfabéticos
+
+    3.1 Indique uma expressão regular para detectar tais endereços de email
+
+    3.2 Indique como utilizar essa expressão regular em JavaScript para 
+         obter todos os endereços de email contidos numa string.
+
+    3.2 Agora pretende substituir a arroba desses endereços por '&'.
+
+4. Uma data do tipo YYYY.MM.DD. Apenas aceite anos entre 1950 e 2050.
+   Ignore possibilidade de anos bissextos (mas como poderia incorporá-los?).
