@@ -1,5 +1,8 @@
 USE ESTUDANTES;
 
+-- bla, bla, bla
+
+
 
 /*
 Preliminar: analisar a query seguinte
